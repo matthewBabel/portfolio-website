@@ -1,0 +1,8 @@
+<html>
+    <head>
+        <title>Welcome to Your_domain!</title>
+    </head>
+    <body>
+        <h1>This ins in mattbabel.com/ but not in public_html. This is bad news!</h1>
+    </body>
+</html>

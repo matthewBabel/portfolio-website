@@ -1,0 +1,38 @@
+#contact {
+    width: 95%;
+    text-align: center;
+    display: block;
+    background-color: #666699;
+    color: white;
+    margin: auto;
+
+    border: #e3e3e3 5px solid;
+    border-radius: 6px;
+
+    h4 {
+        font-size: 13px
+    }    
+}
+
+.shadow {
+    text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
+}
+
+#profileImg {
+    margin: auto;
+    object-fit: contain;
+    padding-bottom: 1%;
+
+    max-height: 500px;
+    max-width: 95%;
+    height: auto;
+    width: auto;
+
+    img {
+        border: 3px solid #e6e6e6;
+        border-radius: 6px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        overflow: hidden;
+    
+    }
+}

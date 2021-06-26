@@ -1,0 +1,241 @@
+/* global*/
+@import 'config';
+@import 'button';
+@import 'about';
+@import 'contact';
+@import 'garlicquasar';
+
+
+body {
+    background-color: $main-color;
+    font-family: $font-stack;
+    padding: 0;
+    margin: 0;
+    background: url("/static/img/background4-min.jpg") center center fixed;
+}
+
+/* header */
+header {
+    background-color: $header-color;
+    border-bottom: #000066 6px solid;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 1;
+
+    h1 {
+        font-size: 3.3vw;
+        float: left;
+        text-align: center;
+        margin-left: 1%;
+        font-weight: bold;
+        width:40%;
+        margin-top: 1%;
+    }
+
+    ul {
+        text-align: center;
+        margin: 0.4vw;
+    }
+
+    li {
+        display: inline;
+        padding: 0 0.8vw 0 0.8vw;
+    }
+
+    nav {
+        margin-top: 1%;
+        margin-bottom: 1%;
+        float: right;
+        width: 55%;
+        background-color: #f5dbba;
+        border-radius: 2vw;
+        border: black 3px solid;
+        box-shadow: 5px 5px;
+    }
+    
+    a {
+        color: #404040;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.5vw;
+        font-weight: 700;
+    }
+
+    a:hover {
+        color: gray;
+        text-decoration-line: underline;
+    }
+}
+
+/* main */
+main { 
+    img {
+        max-width: 95%;
+        max-height: 500px;
+        width:auto;
+        height: auto;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        overflow-x: hidden;
+        border: 3px solid #002080;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        text-decoration: underline;
+        margin-top: 30px;
+        margin-bottom: 3%;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 35px;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: bold;
+    }
+
+    h3 {
+        text-align: center;
+    }
+    
+    h4 {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    a {
+        text-decoration: none;
+    }    
+    
+    p {
+        font-size: 18px;
+    }
+
+    li {
+        margin-bottom: 4px;
+    }
+}
+
+footer {
+    border-top: white 4px solid;
+    background-color: #40220f;
+    color: white;
+
+    #copyright {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+    
+    #contactInfo {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        text-align: center;
+    
+        a {
+            color: #94CBFE;
+        }
+    }
+    
+    #icons {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        background-color: #f5dbba;
+        border-radius: 10px;
+    }
+}
+
+#makeforyou {
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+#stayatbottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#nameLink a {
+    text-transform: none;
+}
+
+#contact {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#borderId {
+    border: #004d00 3px solid;
+    border-radius: 6px;
+    background-color: #BFFAE4;
+}
+
+#intro {
+    font-size: 50px;
+    font-stretch: expanded;
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+
+#underline {
+    color: #660066;
+
+    a:hover {
+        color: #ff6666;
+        text-decoration-line: underline;
+    }
+}
+
+#accomplishmentsText {
+    margin-left: 3%;
+}
+
+#smallBottomMargin {
+    margin-bottom: 1%;
+}
+
+#moveLiRight {
+    margin-left: 50%;
+}
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.site-content {
+    flex:1;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header-margin {
+    padding-top: 175px;
+}
+
+.textshadow {
+    text-shadow: 5px 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
+}
+
+.textmargins {
+    margin: 3%;
+}             
+
+
+@import 'mobile';

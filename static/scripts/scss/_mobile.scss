@@ -1,0 +1,99 @@
+.menu,
+.submenu {
+    list-style-type:none;
+}
+
+.logo {
+    font-size: 3.7vw;
+    padding: 0px 5px 5px 0;
+    flex: 1;
+    font-family: "Verdana", "Times New Roman", serif;
+}
+
+.item {
+    padding: 1px;
+
+}
+
+.item.button {
+    padding: 2px 2px;
+}
+
+.item:not(.button) a:hover,
+.item a:hover::after {
+    color: #ccc;
+}
+
+.menu {
+    display: none;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+
+    li a {
+        display: block;
+        padding: 3px 2px;
+        align-content: flex-end;
+    }
+}
+
+.toggle a{
+    order: 1;
+    font-size: 3.5vw;
+}
+
+.item.button {
+    order: 2;
+}
+
+.item {
+    order: 3;
+    width: 100%;
+    text-align: left;
+    display: none;         
+    
+    a {
+        font-size: 3vw;
+    }
+}
+
+
+.active .item {
+    display: block;
+}
+
+@media only screen and (min-width: 769px) {
+    .desktop-nav {
+        display: show;
+    }
+    
+    .menu {
+        display: none;
+    }
+    
+    header h1 {
+        margin-top: 1%;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
+    
+    .menu {
+        display: flex;
+    }
+    
+    header {
+        nav {
+            width:40%;
+            margin-bottom: 2%;
+        }
+        
+        h1 {
+            margin-top: 3%;
+            font-size: 4.1vw;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+main {
+    article {
+        margin-top: 1%;
+        max-width: 60%;
+        margin-bottom: 20px;
+    
+        p {
+            margin-left: 15px;
+        }    
+    }
+
+    aside {
+        margin-top: 150px;
+        float: right;
+        max-width: 40%;
+    }
+}
+
+.aboutImg img {
+    border: 3px solid #e6e6e6;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-right: 0px;
+
+    max-height: 500px;
+    max-width: 100%;
+    height: auto;
+    width: auto;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.aboutmeinfo {
+    margin-bottom: 5%;
+
+    h3 {
+        font-size: 19px;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
