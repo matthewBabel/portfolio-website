@@ -3,16 +3,9 @@
     list-style-type:none;
 }
 
-.logo {
-    font-size: 3.7vw;
-    padding: 0px 5px 5px 0;
-    flex: 1;
-    font-family: "Verdana", "Times New Roman", serif;
-}
 
 .item {
     padding: 1px;
-
 }
 
 .item.button {
@@ -28,17 +21,43 @@
     display: none;
     flex-wrap: wrap;
     justify-content:flex-end;
+    border-bottom: $off-color 3px solid;
 
-    li a {
+    a {
         display: block;
-        padding: 3px 2px;
+        padding: 0.5rem;
+        margin-right: 1.75rem;
         align-content: flex-end;
     }
 }
 
+.submenu {
+    -webkit-transition: all 0.75s ease-in-out; 
+    -moz-transition: all 0.75s ease-in-out; 
+    -ms-transition: all 0.75s ease-in-out; 
+    -o-transition: all 0.75s ease-in-out; 
+    transition: all 0.75s ease-in-out;  
+    overflow: hidden;
+    height: 0vw;
+    //max-height: 0vw;
+    color: white;
+    background-color: $dark-grey;
+
+    &.active {
+        height:  11rem;
+        //max-height: 30vw !important;
+    }
+}
+
+#navbar .item a {
+    font-size: 1.2rem;
+}
+
 .toggle a{
     order: 1;
-    font-size: 3.5vw;
+}
+.toggle a i{
+    padding: 5px;
 }
 
 .item.button {
@@ -46,18 +65,25 @@
 }
 
 .item {
+    -webkit-transition: all 0.75s ease-in-out; 
+    -moz-transition: all 0.75s ease-in-out; 
+    -ms-transition: all 0.75s ease-in-out; 
+    -o-transition: all 0.75s ease-in-out; 
+    transition: all 0.75s ease-in-out;  
     order: 3;
     width: 100%;
-    text-align: left;
-    display: none;         
-    
-    a {
-        font-size: 3vw;
-    }
+    display: block;
+    opacity: 0;   
+    font-size: 12px;  
+}
+
+.menu .toggle {
+    font-size: 1.5rem !important;
 }
 
 
 .active .item {
+    opacity: 1;
     display: block;
 }
 
@@ -69,10 +95,41 @@
     .menu {
         display: none;
     }
-    
-    header h1 {
-        margin-top: 1%;
+
+    #navbar nav {
+        border-bottom: $off-color 3px solid;
+
+        ul {
+            padding-left: 10%;
+        }
+    }    
+
+    .hidden-left {
+        opacity: 0;
+        transform: translate(-100%);
     }
+    
+    .hidden-right {
+        opacity: 0;
+        transform: translate(100%);
+    }
+    
+    .hidden-top {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    
+    .fade-in-element-left {
+        animation: fade-in-left 1.5s;
+     }
+    
+    .fade-in-element-right {
+       animation: fade-in-right 1.5s;
+    }
+    
+    .fade-in-element-top {
+        animation: fade-in-top 1s;
+     }
 }
 
 
@@ -84,16 +141,39 @@
     .menu {
         display: flex;
     }
-    
-    header {
-        nav {
-            width:40%;
-            margin-bottom: 2%;
-        }
-        
-        h1 {
-            margin-top: 3%;
-            font-size: 4.1vw;
+
+    #navbar nav {
+        border-bottom: none;
+
+        ul {
+            padding-left: 5%;
         }
     }
+
+    .hidden-left {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .hidden-right {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .hidden-top {
+        opacity: 1;
+        transform: none;
+    }
+    
+    .fade-in-element-left {
+        animation: none;
+     }
+    
+    .fade-in-element-right {
+       animation: none;
+    }
+    
+    .fade-in-element-top {
+        animation: none;
+     }
 }

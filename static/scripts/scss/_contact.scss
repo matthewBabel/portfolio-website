@@ -1,38 +1,71 @@
-#contact {
-    width: 95%;
+#contact-section {
+    background-color: $contact-color;
     text-align: center;
-    display: block;
-    background-color: #666699;
-    color: white;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
 
-    border: #e3e3e3 5px solid;
-    border-radius: 6px;
+    h1 {
+        padding-top: 2%;
+        color: white;
+        
+    }
 
     h4 {
-        font-size: 13px
-    }    
-}
+        color: white;
+    }
 
-.shadow {
-    text-shadow: 0 13.36px 8.896px #c4b59d, 0 -2px 1px #fff;
-}
-
-#profileImg {
-    margin: auto;
-    object-fit: contain;
-    padding-bottom: 1%;
-
-    max-height: 500px;
-    max-width: 95%;
-    height: auto;
-    width: auto;
-
-    img {
-        border: 3px solid #e6e6e6;
-        border-radius: 6px;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        overflow: hidden;
-    
+    p {
+        color: $highlight-color;
+        margin-bottom: 3%;
     }
 }
+
+#contact {
+    position: relative;
+}
+
+#post-contact {
+    top: 50%;
+    text-align: center;
+       position: absolute;
+       bottom: 10px;
+       left: 50%;
+       display: inline-block;
+       transform: translateX(-50%);
+}
+
+form {
+    width: 50%;
+    display: inline-block;
+
+    input[type=text], input[type=email], textarea {
+        width: 100%;
+        padding: 5px;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 2px;
+        resize: vertical;
+        align-content: center;
+        background-color: darkslategray;
+        color:white;
+    }
+    
+    ::placeholder {
+        color: lightslategray;
+    }
+    
+    
+    input[type=submit] {
+        float: right;
+        width: fit-content;
+        resize: vertical;
+        padding: 2px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-size:1rem;
+    }
+}
+

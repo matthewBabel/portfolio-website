@@ -1,3 +1,17 @@
-$font-stack: "Verdana", "Times New Roman", serif;
-$main-color: #e6fffa; 
+@font-face {
+    font-family: 'candara';
+    src: url("/static/font/Candara.eot") format("embedded-opentype"),
+        url("/static/font/Candara.woff") format("woff"),
+        url("/static/font/Candara.woff2") format("woff2"),
+        url('/static/font/Candara.tff') format('truetype');
+}
+
+$font-stack: 'candara', 'Calibri', Sans-serif;
+$main-color: #e5f0fdea; 
 $header-color: #cad6bf;
+$highlight-color: #0effd3;
+$off-color: #e2f7ffea;
+$off-color-dark: #030445;
+$dark-grey: #2e2e31;
+$contact-color: #034523;
+$footer-color: #032e17;;

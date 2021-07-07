@@ -1,70 +1,31 @@
 /* global*/
 @import 'config';
 @import 'button';
+@import 'navbar';
 @import 'about';
 @import 'contact';
 @import 'garlicquasar';
 
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
 
 body {
     background-color: $main-color;
     font-family: $font-stack;
     padding: 0;
     margin: 0;
-    background: url("/static/img/background4-min.jpg") center center fixed;
-}
-
-/* header */
-header {
-    background-color: $header-color;
-    border-bottom: #000066 6px solid;
-    position: fixed;
-    width: 100%;
-    z-index: 1;
-    top: 1;
+    overflow-x: hidden;
+    //position: relative;
 
     h1 {
-        font-size: 3.3vw;
-        float: left;
-        text-align: center;
-        margin-left: 1%;
-        font-weight: bold;
-        width:40%;
-        margin-top: 1%;
-    }
-
-    ul {
-        text-align: center;
-        margin: 0.4vw;
+        text-underline-offset: 15px;
     }
 
     li {
-        display: inline;
-        padding: 0 0.8vw 0 0.8vw;
-    }
-
-    nav {
-        margin-top: 1%;
-        margin-bottom: 1%;
-        float: right;
-        width: 55%;
-        background-color: #f5dbba;
-        border-radius: 2vw;
-        border: black 3px solid;
-        box-shadow: 5px 5px;
-    }
-    
-    a {
-        color: #404040;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1.5vw;
-        font-weight: 700;
-    }
-
-    a:hover {
-        color: gray;
-        text-decoration-line: underline;
+        font-size: 1.35rem;
     }
 }
 
@@ -75,11 +36,10 @@ main {
         max-height: 500px;
         width:auto;
         height: auto;
-        border-radius: 10px;
         margin-bottom: 40px;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        //box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         overflow-x: hidden;
-        border: 3px solid #002080;
+        border: 1px solid $dark-grey;
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -87,7 +47,7 @@ main {
 
     h1 {
         text-align: center;
-        font-size: 50px;
+        font-size: 4rem;
         text-decoration: underline;
         margin-top: 30px;
         margin-bottom: 3%;
@@ -95,18 +55,19 @@ main {
     }
 
     h2 {
-        font-size: 35px;
+        font-size: 3rem;
         text-align: center;
         padding-top: 10px;
         font-weight: bold;
     }
 
     h3 {
+        font-size: 2rem;
         text-align: center;
     }
     
     h4 {
-        font-size: 20px;
+        font-size: 1.5rem;
         font-weight: bold;
         text-align: center;
     }
@@ -116,7 +77,7 @@ main {
     }    
     
     p {
-        font-size: 18px;
+        font-size: 1.35em;
     }
 
     li {
@@ -126,32 +87,74 @@ main {
 
 footer {
     border-top: white 4px solid;
-    background-color: #40220f;
+    background-color: $footer-color;
     color: white;
 
     #copyright {
         text-align: center;
-        margin-top: 10px;
-        margin-bottom: 0px;
+        margin: 10px;
     }
     
-    #contactInfo {
-        margin-top: 0px;
-        margin-bottom: 0px;
+    .icon-border {
+        border: 2px solid black;
+        margin: 10px;
         text-align: center;
-    
-        a {
-            color: #94CBFE;
+        background-color: $contact-color;
+        border-radius: 2px;
+        transition: all ease-in-out 0.25s;
+
+        &:hover {
+            background-color: $highlight-color;
+
+            .icon {
+                animation: jiggle ease-in-out 400ms infinite;
+            }
         }
     }
-    
+
+    .icon-border:hover {
+        background-color: $highlight-color;
+    }
+
     #icons {
-        text-align: center;
+        display: flex;
+        justify-content: center;
         margin-top: 5px;
         margin-bottom: 5px;
-        background-color: #f5dbba;
-        border-radius: 10px;
+        //background-color: #f5dbba;
+        //border-radius: 10px;
+       
     }
+
+    .icon {
+        color: $main-color;
+        font-size: 40px;
+        margin: 10px;
+    }
+}
+
+@keyframes jiggle {
+	0% {
+		transform: none;
+	}
+	25% {
+		transform: rotateZ(5deg);;
+	}
+
+	75% {
+		transform: rotateZ(-5deg)
+	}
+	100% {
+		transform: none;
+	}
+}
+
+#contact-polygon {
+    fill:$contact-color;
+}
+
+#project-section {
+    background-color: $main-color;
 }
 
 #makeforyou {
@@ -169,16 +172,9 @@ footer {
     text-transform: none;
 }
 
-#contact {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 #borderId {
-    border: #004d00 3px solid;
-    border-radius: 6px;
-    background-color: #BFFAE4;
+    border: 1px solid $dark-grey;
+    background-color: $off-color;
 }
 
 #intro {
@@ -209,6 +205,36 @@ footer {
     margin-left: 50%;
 }
 
+#my-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+
+#typewriter-text {
+    color: white;
+    font-size: xx-large;
+
+    b {
+        color:$highlight-color;
+    }
+}
+
+#dishes-video {
+    text-align: center;
+}
+
+.vert-center-text {
+    position: absolute; 
+    top: 40%; 
+    left: 0;
+    text-align: center; 
+    width: 100%; 
+ }
+
 .site {
     display: flex;
     min-height: 100vh;
@@ -226,7 +252,7 @@ footer {
 }
 
 .header-margin {
-    padding-top: 175px;
+    padding-top: 100vh;
 }
 
 .textshadow {
@@ -236,6 +262,65 @@ footer {
 .textmargins {
     margin: 3%;
 }             
+
+.invis {
+    visibility: hidden;
+}
+
+.no-decoration:hover {
+    text-decoration: none !important;
+}
+
+.hidden-left {
+    opacity: 0;
+    transform: translate(-100%);
+}
+
+.hidden-right {
+    opacity: 0;
+    transform: translate(100%);
+}
+
+.hidden-top {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.fade-in-element-left {
+    animation: fade-in-left 1.5s;
+ }
+
+.fade-in-element-right {
+   animation: fade-in-right 1.5s;
+}
+
+.fade-in-element-top {
+    animation: fade-in-top 1s;
+ }
+
+ .center-align {
+     text-align: center;
+ }
+
+ .project-margin {
+     margin-top: 4rem;
+ }
+
+@keyframes fade-in-left {
+    from {opacity: 0; transform: translate(-100%)}
+    to {opacity: 1; transform: translate(0)}
+}
+
+@keyframes fade-in-right {
+    from {opacity: 0; transform: translate(100%)}
+    to {opacity: 1; transform: translate(0)}
+}
+
+@keyframes fade-in-top {
+    from {opacity: 0; transform: translateY(-100%)}
+    to {opacity: 1; transform: translate(0)}
+}
+
 
 
 @import 'mobile';

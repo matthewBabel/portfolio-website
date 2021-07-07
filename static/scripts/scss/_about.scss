@@ -17,8 +17,7 @@ main {
 }
 
 .aboutImg img {
-    border: 3px solid #e6e6e6;
-    border-radius: 6px;
+    border: 1px solid $dark-grey;
     margin-left: 10px;
     margin-right: 0px;
 
@@ -34,11 +33,19 @@ main {
 
 .aboutmeinfo {
     margin-bottom: 5%;
+    color: black;
 
     h3 {
-        font-size: 19px;
         text-decoration: underline;
         font-weight: bold;
+    }
+}
+
+#about-section {
+    background-color:$main-color;
+
+    h1 {
+        padding-top: 2%;
     }
 }
 
