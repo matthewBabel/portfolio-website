@@ -4,8 +4,6 @@ $(function () {
     var topElements = document.querySelectorAll('.hidden-top');
     windowHeight = window.innerHeight - (window.innerHeight/4);
 
-    console.log(windowHeight)
-
     for (var i = 0; i < leftElements.length; i++) {
         var element = leftElements[i];
         var positionFromTop = leftElements[i].getBoundingClientRect().top;

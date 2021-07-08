@@ -52,10 +52,10 @@
         <div class="col-xs-5 offset-xs-1 col-sm-5 offset-sm-1 col-md-5 offset-md-1 col-lg-2 offset-lg-0 hidden-right">
             <img id="rightAppImg" src="/static/img/gameplay_shot_2.jpg" alt="Dishes Need Packing Gameplay">
         </div>
-
+        
         <div class="col-xs-5 col-sm-5 col-md-5 col-lg-2 hidden-right">
             <div id="dishes-video">
-                <video id="videoplayer" width="85%" height="auto" controls>
+                <video id="videoplayer" width="85%" height="auto" controls >
                     <source src="/static/video/dishes_need_packing_video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -79,13 +79,13 @@
             </div>
         </div>
 
-        <div class="col-xs-12 col-lg-8 hidden-left">
+        <div class="col-xs-12 col-lg-7 hidden-left">
             <div>
                 <img src="/static/img/graph-screen.png" alt="Music Database Pic">
             </div>
         </div>
 
-        <div class="d-none d-lg-block col-xs-12 col-lg-3">
+        <div class="d-none d-lg-block col-xs-12 col-lg-5">
             <div>
                 <h2 class="hidden-right">Software - Top 10 Artists of the Month</h2>
                 <p class="hidden-right">An application that displays info and stats of a users top 10 favorite
@@ -129,8 +129,13 @@
             </div>
         </div>
 
-        <div class="col-xs-12 col-lg-6 hidden-left">
-            <img src="/static/img/GamePic1-min.png" alt="The Lost Wand Pic">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 hidden-left">
+            <div id="wand-video">
+                <video id="videoplayerwand" width="90%" height="auto" controls >
+                    <source src="/static/video/the-lost-wand-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
         </div>
 
         <div class="d-none d-lg-block col-xs-12 col-lg-5">
@@ -162,4 +167,7 @@
     // set video volume to 50%
     var vid = document.getElementById("videoplayer");
     vid.volume = 0.5;
+
+    var vid2 = document.getElementById("videoplayerwand");
+    vid2.volume = 0.5;
 </script>
